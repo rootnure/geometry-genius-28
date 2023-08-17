@@ -36,6 +36,25 @@
                         </div>
                     </div>
                 </div>
+                <!-- card 1: rectangle -->
+                <div class="card bg-base-100 border">
+                    <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area: height X width</p>
+                        <p>
+                            <input type="text" name="" id="rectangle-height" class="bg-gray-100 rounded-xl w-20 p-2" placeholder="height">
+                            <span>cm</span>
+                            <input type="text" name="" id="rectangle-width" class="bg-gray-100 rounded-xl w-20 p-2" placeholder="width">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-3xl">Area: <span id="rectangle-area" class="font-bold">...</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full" onclick="calculateRectangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- area calculator -->
             <div class="w-[250px] lg:w-[400px]">
                 <div class="text-4xl">Area Calculator</div>
