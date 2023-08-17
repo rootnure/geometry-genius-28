@@ -40,6 +40,15 @@ function calculateParallelogramArea() {
     setElementInnerTextById('parallelogram-area', area);
 }
 
+function calculateRhombusArea() {
+    const side = getInputValueById("rhombus-side");
+    const angle = getInputValueById("rhombus-angle");
+    const angleToRadian = angle * Math.PI / 180;
+    const area = side * side * Math.sin(angleToRadian);
+    
+    setElementInnerTextById('rhombus-area', area.toFixed(2));
+}
+
 /* reuseable function --> reduce duplicate code */
 
 // reusable get input value field in number
