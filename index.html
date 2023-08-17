@@ -15,12 +15,12 @@
     </header>
     <main>
         <!-- main container -->
-        <div class="flex flex-col md:flex-row container mx-auto">
+        <div class="flex flex-col md:flex-row container mx-auto mt-20">
             <!-- shape container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <!-- card 1: triangle -->
                 <div class="card bg-base-100 border">
-                    <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                    <figure class="p-5"><img src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Triangle</h2>
                         <p>Area: 0.5 X base X height</p>
@@ -36,9 +36,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 1: rectangle -->
+                <!-- card 2: rectangle -->
                 <div class="card bg-base-100 border">
-                    <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <figure class="p-5"><img src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Rectangle</h2>
                         <p>Area: height X width</p>
@@ -51,6 +51,24 @@
                         <p class="text-3xl">Area: <span id="rectangle-area" class="font-bold">...</span> cm<sup>2</sup></p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full" onclick="calculateRectangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3: parallelogram -->
+                <div class="card bg-base-100 border">
+                    <figure class="p-5"><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area: base X height</p>
+                        <p>
+                            <input type="text" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2" placeholder="base">
+                            <span>cm</span>
+                            <input type="text" name="" id="parallelogram-height" class="bg-gray-100 rounded-xl w-20 p-2" placeholder="height">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full" onclick="calculateParallelogramArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
