@@ -15,7 +15,7 @@
     </header>
     <main>
         <!-- main container -->
-        <div class="flex flex-col md:flex-row container mx-auto mt-20">
+        <div class="flex flex-col md:flex-row container mx-auto mt-20 gap-8">
             <!-- shape container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <!-- card 1: triangle -->
@@ -102,26 +102,26 @@
                         <p id="area-formula-base-height" class="hidden">Area: base ✕ height</em></p>
                         <!-- user inputs -->
                         <p id="user-input-side-angle" class="hidden">
-                            <input type="text" name="" id="rhombus-side" class="bg-gray-100 rounded-xl w-20 p-2"
+                            <input type="number" name="" id="rhombus-side" class="bg-gray-100 rounded-xl w-20 p-2"
                                 placeholder="side">
                             <span>cm</span>
-                            <input type="text" name="" id="rhombus-angle" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="θ">
+                            <input type="number" name="" id="rhombus-angle" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="θ" min="0" max="90">
                             <span>°</span>
                         </p>
                         <p id="user-input-diagonals" class="hidden">
-                            <input type="text" name="" id="rhombus-diagonal-1" class="bg-gray-100 rounded-xl w-20 p-2"
+                            <input type="number" name="" id="rhombus-diagonal-1" class="bg-gray-100 rounded-xl w-20 p-2"
                                 placeholder="d1">
                             <span>cm</span>
-                            <input type="text" name="" id="rhombus-diagonal-2" class="bg-gray-100 rounded-xl w-20 p-2"
+                            <input type="number" name="" id="rhombus-diagonal-2" class="bg-gray-100 rounded-xl w-20 p-2"
                                 placeholder="d2">
                             <span>cm</span>
                         </p>
                         <p id="user-input-base-height" class="hidden">
-                            <input type="text" name="" id="rhombus-base" class="bg-gray-100 rounded-xl w-20 p-2"
+                            <input type="number" name="" id="rhombus-base" class="bg-gray-100 rounded-xl w-20 p-2"
                                 placeholder="base">
                             <span>cm</span>
-                            <input type="text" name="" id="rhombus-height" class="bg-gray-100 rounded-xl w-20 p-2"
+                            <input type="number" name="" id="rhombus-height" class="bg-gray-100 rounded-xl w-20 p-2"
                                 placeholder="height">
                             <span>cm</span>
                         </p>
