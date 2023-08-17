@@ -20,7 +20,7 @@
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <!-- card 1: triangle -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5"><img src="./images/triangle.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Triangle</h2>
                         <p>Area: 0.5 ✕ base ✕ height</p>
@@ -39,9 +39,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- card 2: rectangle -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5"><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Rectangle</h2>
                         <p>Area: height ✕ width</p>
@@ -60,9 +61,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- card 3: parallelogram -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5"><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Parallelogram</h2>
                         <p>Area: base ✕ height</p>
@@ -83,13 +85,14 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- card 4: rhombus -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5"><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/rhombus.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Rhombus</h2>
                         <p>Calculate By:
-                            <select id="rhombus-area-by" onchange="toggleRhombusAreas()" class="bg-gray-200 p-2 rounded-lg">
+                            <select id="rhombus-area-by" onchange="toggleRhombusCardElements()" class="bg-gray-200 p-2 rounded-lg">
                                 <option value="select">Select One</option>
                                 <option value="side-angle">Side & Angle</option>
                                 <option value="diagonals">Diagonals</option>
@@ -132,9 +135,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- card 5: pentagon -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5"><img src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Pentagon</h2>
                         <p>Area: base X height</p>
@@ -153,11 +157,59 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- card 6: ellipse -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5"><img src="./images/parallelogram.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Parallelogram</h2>
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-xl font-semibold">Ellipse</h2>
+                        <p>Area: base X height</p>
+                        <p>
+                            <input type="text" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="base">
+                            <span>cm</span>
+                            <input type="text" name="" id="parallelogram-height" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="height">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                            cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full"
+                                onclick="calculateParallelogramArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 7: square -->
+                <div class="card bg-base-100 border">
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/square.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-xl font-semibold">Square</h2>
+                        <p>Area: base X height</p>
+                        <p>
+                            <input type="text" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="base">
+                            <span>cm</span>
+                            <input type="text" name="" id="parallelogram-height" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="height">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                            cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full"
+                                onclick="calculateParallelogramArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6: circle -->
+                <div class="card bg-base-100 border">
+                    <figure class="p-5 h-52"><img class="h-full" src="./images/circle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                        <h2 class="text-xl font-semibold">Circle</h2>
                         <p>Area: base X height</p>
                         <p>
                             <input type="text" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2"
@@ -187,7 +239,15 @@
 
     </footer>
 
-    <script src="./js/area-calculator.js"></script>
+    <script src="./js/utility.js"></script>
+    <script src="./js/calculate-triangle-area.js"></script>
+    <script src="./js/calculate-rectangle-area.js"></script>
+    <script src="./js/calculate-parallelogram-area.js"></script>
+    <script src="./js/calculate-rhombus-area.js"></script>
+    <script src="./js/calculate-pentagon-area.js"></script>
+    <script src="./js/calculate-ellipse-area.js"></script>
+    <script src="./js/calculate-square-area.js"></script>
+    <script src="./js/calculate-circle-area.js"></script>
 </body>
 
 </html>
