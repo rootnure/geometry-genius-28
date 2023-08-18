@@ -12,4 +12,6 @@ function calculateTriangleArea() {
 
     // show triangle area
     setElementInnerTextById('triangle-area', parseFloat(area.toFixed(2)));
+
+    addToCalculationEntry('Triangle', area);
 }

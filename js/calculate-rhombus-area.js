@@ -30,6 +30,8 @@ function calculateRhombusArea() {
         area = base * height;
     }
     setElementInnerTextById('rhombus-area', parseFloat(area.toFixed(2)));
+
+    addToCalculationEntry('Rhombus', area);
 }
 
 function toggleRhombusCardElements() {
