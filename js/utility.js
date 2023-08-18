@@ -49,6 +49,11 @@ function emptyOrStringMsg() {
  * 5. append the created element as a child of the parent
  */
 function addToCalculationEntry(areaType, area) {
+    const emptyHistoryMsg = document.querySelector('#empty-history-mgs');
+    if(!emptyHistoryMsg.classList.value.includes('hidden')) {
+        emptyHistoryMsg.classList.add('hidden');
+    }
+
     const calculationEntry = document.querySelector('#calculation-entry');
 
     const count = calculationEntry.childElementCount;
@@ -56,9 +61,9 @@ function addToCalculationEntry(areaType, area) {
     const p = document.createElement('p');
     p.classList.add('flex', 'justify-between', 'w-full', 'items-center', 'py-2');
     p.innerHTML = `
-        <span>${count + 1}. ${areaType}</span>
+        <span>${count}. ${areaType}</span>
         <span>Area: <span id="area-${count}">${parseFloat(area.toFixed(2))}cm<sup>2</sup></span></span>
-        <span><button onclick="convertToMeterSquare(${area}, 'area-${count}', this)" class="btn btn-success btn-sm">Convert m<sup>2</sup></span>`;
+        <span><button onclick="convertToMeterSquare(${area}, 'area-${count}', this)" class="btn btn-success btn-sm" title="Convert to square meter">m<sup>2</sup></span>`;
 
     calculationEntry.appendChild(p);
 }

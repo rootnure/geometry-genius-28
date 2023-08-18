@@ -10,6 +10,7 @@ function calculateRhombusArea() {
         }
         const angleToRadian = angle * Math.PI / 180;
         area = Math.pow(side, 2) * Math.sin(angleToRadian);
+        addToCalculationEntry('Rhombus(S-θ)', area);
     }
     else if (rhombusAreaBy === 'diagonals') {
         const d1 = getInputValueById("rhombus-diagonal-1");
@@ -19,6 +20,7 @@ function calculateRhombusArea() {
             return;
         }
         area = 0.5 * d1 * d2;
+        addToCalculationEntry('Rhombus(d1-d2)', area);
     }
     else if (rhombusAreaBy === 'base-height') {
         const base = getInputValueById("rhombus-base");
@@ -28,10 +30,10 @@ function calculateRhombusArea() {
             return;
         }
         area = base * height;
+        addToCalculationEntry('Rhombus(B-H)', area);
     }
     setElementInnerTextById('rhombus-area', parseFloat(area.toFixed(2)));
 
-    addToCalculationEntry('Rhombus', area);
 }
 
 function toggleRhombusCardElements() {

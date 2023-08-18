@@ -8,5 +8,5 @@ function calculateSquareArea() {
 
     setElementInnerTextById('square-area', parseFloat(area.toFixed(2)));
 
-    addToCalculationEntry('Square', area);
+    addToCalculationEntry('Square(S)', area);
 }

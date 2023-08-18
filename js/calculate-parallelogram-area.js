@@ -5,5 +5,5 @@ function calculateParallelogramArea() {
 
     setElementInnerTextById('parallelogram-area', parseFloat(area.toFixed(2)));
 
-    addToCalculationEntry('Parallelogram', area);
+    addToCalculationEntry('Parallelogram(B-H)', area);
 }

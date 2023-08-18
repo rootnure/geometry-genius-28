@@ -13,5 +13,5 @@ function calculateRectangleArea() {
     // show rectangle area
     setElementInnerTextById('rectangle-area', parseFloat(area.toFixed(2)));
 
-    addToCalculationEntry('Rectangle', area);
+    addToCalculationEntry('Rectangle(H-W)', area);
 }

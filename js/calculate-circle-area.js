@@ -8,5 +8,5 @@ function calculateCircleArea() {
 
     setElementInnerTextById('circle-area', parseFloat(area.toFixed(2)));
 
-    addToCalculationEntry('Circle', area);
+    addToCalculationEntry('Circle(R)', area);
 }

@@ -10,5 +10,5 @@ function calculatePentagonArea() {
 
     setElementInnerTextById('pentagon-area', parseFloat(area.toFixed(2)));
 
-    addToCalculationEntry('Pentagon', area);
+    addToCalculationEntry('Pentagon(P-A)', area);
 }
