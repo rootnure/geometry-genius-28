@@ -31,3 +31,11 @@ function toggleElementById(elementId, isHidden) {
 function emptyOrStringMsg() {
     alert('Input fields cannot be empty or string');
 }
+
+
+/* Data Validation */
+/**
+ * 1. set the proper type of the input field. (number, text, email)
+ * 2. check type using typeof
+ * 3. NaN (Not A Number): isNaN is checking whether the input is not a number or not
+ */
