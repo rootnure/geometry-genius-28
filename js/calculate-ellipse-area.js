@@ -7,5 +7,5 @@ function calculateEllipseArea() {
     }
     const area = Math.PI * majorRadius * minorRadius;
     setElementInnerTextById('ellipse-area', parseFloat(area.toFixed(2)));
-    console.log(Math.PI);
+    addToCalculationEntry('Ellipse', area);
 }
