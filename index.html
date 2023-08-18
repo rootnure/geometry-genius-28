@@ -20,7 +20,7 @@
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <!-- card 1: triangle -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/triangle.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Triangle</h2>
                         <p>Area: 0.5 ✕ base ✕ height</p>
@@ -32,7 +32,7 @@
                                 placeholder="height">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="triangle-area" class="font-bold">...</span> cm<sup>2</sup>
+                        <p class="text-xl lg:text-3xl">Area: <span id="triangle-area" class="font-bold">...</span> cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
@@ -42,7 +42,7 @@
 
                 <!-- card 2: rectangle -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Rectangle</h2>
                         <p>Area: height ✕ width</p>
@@ -54,7 +54,7 @@
                                 placeholder="width">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="rectangle-area" class="font-bold">...</span> cm<sup>2</sup>
+                        <p class="text-xl lg:text-3xl">Area: <span id="rectangle-area" class="font-bold">...</span> cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full" onclick="calculateRectangleArea()">Calculate</button>
@@ -64,7 +64,7 @@
 
                 <!-- card 3: parallelogram -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Parallelogram</h2>
                         <p>Area: base ✕ height</p>
@@ -76,7 +76,7 @@
                                 placeholder="height">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                        <p class="text-xl lg:text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
@@ -88,7 +88,7 @@
 
                 <!-- card 4: rhombus -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/rhombus.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Rhombus</h2>
                         <p>Calculate By:
@@ -128,7 +128,7 @@
                                 placeholder="height">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="rhombus-area" class="font-bold">...</span> cm<sup>2</sup>
+                        <p class="text-xl lg:text-3xl">Area: <span id="rhombus-area" class="font-bold">...</span> cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button id="calculate-rhombus-area" class="btn btn-primary w-full" onclick="calculateRhombusArea()" disabled>Calculate</button>
@@ -138,7 +138,7 @@
 
                 <!-- card 5: pentagon -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Pentagon</h2>
                         <p>Area: base X height</p>
@@ -150,7 +150,7 @@
                                 placeholder="height">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="pentagon-area" class="font-bold">...</span> cm<sup>2</sup>
+                        <p class="text-xl lg:text-3xl">Area: <span id="pentagon-area" class="font-bold">...</span> cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full" onclick="calculatePentagonArea()">Calculate</button>
@@ -160,7 +160,7 @@
 
                 <!-- card 6: ellipse -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Ellipse</h2>
                         <p>Area: π ✕ A ✕ B</p>
@@ -172,7 +172,7 @@
                                 placeholder="B">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="ellipse-area" class="font-bold">...</span>
+                        <p class="text-xl lg:text-3xl">Area: <span id="ellipse-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
@@ -184,7 +184,7 @@
 
                 <!-- card 7: square -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/square.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/square.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Square</h2>
                         <p>Area: base X height</p>
@@ -196,7 +196,7 @@
                                 placeholder="height">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                        <p class="text-xl lg:text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
@@ -208,7 +208,7 @@
 
                 <!-- card 8: circle -->
                 <div class="card bg-base-100 border">
-                    <figure class="p-5 h-52"><img class="h-full" src="./images/circle.png" alt="Shoes" /></figure>
+                    <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/circle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Circle</h2>
                         <p>Area: base X height</p>
@@ -220,7 +220,7 @@
                                 placeholder="height">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                        <p class="text-xl lg:text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
@@ -231,7 +231,7 @@
                 </div>
             </div>
             <!-- area calculator -->
-            <div class="w-full lg:w-[400px]">
+            <div class="w-full md:w-4/12 lg:w-[400px]">
                 <div class="text-4xl">Area Calculator</div>
                 <div id="calculation-entry" class="max-h-[650px] overflow-auto border rounded-lg p-2"></div>
             </div>
