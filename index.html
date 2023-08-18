@@ -163,21 +163,21 @@
                     <figure class="p-5 h-52"><img class="h-full" src="./images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Ellipse</h2>
-                        <p>Area: base X height</p>
+                        <p>Area: π ✕ A ✕ B</p>
                         <p>
-                            <input type="text" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="base">
+                            <input type="text" name="" id="ellipse-major-radius" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="A">
                             <span>cm</span>
-                            <input type="text" name="" id="parallelogram-height" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="height">
+                            <input type="text" name="" id="ellipse-minor-radius" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="B">
                             <span>cm</span>
                         </p>
-                        <p class="text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                        <p class="text-3xl">Area: <span id="ellipse-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full"
-                                onclick="calculateParallelogramArea()">Calculate</button>
+                                onclick="calculateEllipseArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 6: circle -->
+
+                <!-- card 8: circle -->
                 <div class="card bg-base-100 border">
                     <figure class="p-5 h-52"><img class="h-full" src="./images/circle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
