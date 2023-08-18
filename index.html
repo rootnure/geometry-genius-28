@@ -141,13 +141,13 @@
                     <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Pentagon</h2>
-                        <p>Area: base X height</p>
+                        <p>Area: 0.5 ✕ perimeter ✕ apothem</p>
                         <p>
-                            <input type="number" name="" id="pentagon-base" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="base">
+                            <input type="number" name="" id="pentagon-perimeter" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="p">
                             <span>cm</span>
-                            <input type="number" name="" id="pentagon-height" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="height">
+                            <input type="number" name="" id="pentagon-apothem" class="bg-gray-100 rounded-xl w-20 p-2"
+                                placeholder="a">
                             <span>cm</span>
                         </p>
                         <p class="text-xl lg:text-3xl">Area: <span id="pentagon-area" class="font-bold">...</span> cm<sup>2</sup>
@@ -187,21 +187,17 @@
                     <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/square.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Square</h2>
-                        <p>Area: base X height</p>
+                        <p>Area: side<sup>2</sup></p>
                         <p>
-                            <input type="number" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="base">
-                            <span>cm</span>
-                            <input type="number" name="" id="parallelogram-height" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="height">
+                            <input type="number" name="" id="square-side" class="bg-gray-100 rounded-xl w-20 lg:w-36 p-2" placeholder="side">
                             <span>cm</span>
                         </p>
-                        <p class="text-xl lg:text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                        <p class="text-xl lg:text-3xl">Area: <span id="square-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full"
-                                onclick="calculateParallelogramArea()">Calculate</button>
+                                onclick="calculateSquareArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -211,21 +207,18 @@
                     <figure class="p-5 h-32 lg:h-52"><img class="max-h-full" src="./images/circle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                         <h2 class="text-xl font-semibold">Circle</h2>
-                        <p>Area: base X height</p>
+                        <p>Area: π ✕ radius<sup>2</sup></p>
                         <p>
-                            <input type="number" name="" id="parallelogram-base" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="base">
-                            <span>cm</span>
-                            <input type="number" name="" id="parallelogram-height" class="bg-gray-100 rounded-xl w-20 p-2"
-                                placeholder="height">
+                            <input type="number" name="" id="circle-radius" class="bg-gray-100 rounded-xl w-20 lg:w-36 p-2"
+                                placeholder="radius">
                             <span>cm</span>
                         </p>
-                        <p class="text-xl lg:text-3xl">Area: <span id="parallelogram-area" class="font-bold">...</span>
+                        <p class="text-xl lg:text-3xl">Area: <span id="circle-area" class="font-bold">...</span>
                             cm<sup>2</sup>
                         </p>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full"
-                                onclick="calculateParallelogramArea()">Calculate</button>
+                                onclick="calculateCircleArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -233,7 +226,7 @@
             <!-- area calculator -->
             <div class="w-full md:w-4/12 lg:w-[400px]">
                 <div class="text-4xl">Area Calculator</div>
-                <div id="calculation-entry" class="max-h-[650px] overflow-auto border rounded-lg p-2"></div>
+                <div id="calculation-entry" class="max-h-[650px] overflow-auto border rounded-lg p-2 mt-3"></div>
             </div>
         </div>
     </main>
