@@ -37,55 +37,43 @@ function calculateRhombusArea() {
 }
 
 function toggleRhombusCardElements() {
+    setElementInnerTextById('rhombus-area', '...');
+
     const selection = document.querySelector('#rhombus-area-by').value;
     const calculateBtn = document.querySelector('#calculate-rhombus-area');
-    setElementInnerTextById('rhombus-area', '...');
 
     if (selection === 'select') {
         calculateBtn.setAttribute('disabled', true);
-        const toggleElements = {
+    } else {
+        calculateBtn.removeAttribute('disabled');
+    }
+
+    const willElementsVisible = {
+        'select': {
             'area-formula-side-angle': true,
             'area-formula-diagonals': true,
             'area-formula-base-height': true,
             'user-input-side-angle': true,
             'user-input-diagonals': true,
             'user-input-base-height': true,
-        }
-        for(const element in toggleElements) {
-            toggleElementById(element, toggleElements[element]);
-        }
-    }
-    else if (selection === 'side-angle') {
-        calculateBtn.removeAttribute('disabled');
-        const toggleElements = {
+        },
+        'side-angle': {
             'area-formula-side-angle': false,
             'area-formula-diagonals': true,
             'area-formula-base-height': true,
             'user-input-side-angle': false,
             'user-input-diagonals': true,
             'user-input-base-height': true,
-        }
-        for(const element in toggleElements) {
-            toggleElementById(element, toggleElements[element]);
-        }
-    }
-    else if (selection === 'diagonals') {
-        calculateBtn.removeAttribute('disabled');
-        const toggleElements = {
+        },
+        'diagonals': {
             'area-formula-side-angle': true,
             'area-formula-diagonals': false,
             'area-formula-base-height': true,
             'user-input-side-angle': true,
             'user-input-diagonals': false,
             'user-input-base-height': true,
-        }
-        for(const element in toggleElements) {
-            toggleElementById(element, toggleElements[element]);
-        }
-    }
-    else if (selection === 'base-height') {
-        calculateBtn.removeAttribute('disabled');
-        const toggleElements = {
+        },
+        'base-height': {
             'area-formula-side-angle': true,
             'area-formula-diagonals': true,
             'area-formula-base-height': false,
@@ -93,8 +81,11 @@ function toggleRhombusCardElements() {
             'user-input-diagonals': true,
             'user-input-base-height': false,
         }
-        for(const element in toggleElements) {
-            toggleElementById(element, toggleElements[element]);
-        }
+    }
+
+    const toggleElements = willElementsVisible[selection];
+
+    for (const elementId in toggleElements) {
+        toggleElementById(elementId, toggleElements[elementId]);
     }
 }
