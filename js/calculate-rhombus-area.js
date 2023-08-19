@@ -1,7 +1,7 @@
-document.querySelector('#rhombus-angle').addEventListener('keyup', rhombusAngleValidation);
-document.querySelector('#rhombus-angle').addEventListener('change', rhombusAngleValidation);
+const rhombusAngleInputField = document.querySelector('#rhombus-angle');
+rhombusAngleInputField.addEventListener('keyup', rhombusAngleValidation);
+rhombusAngleInputField.addEventListener('change', rhombusAngleValidation);
 function rhombusAngleValidation() {
-    const rhombusAngleInputField = document.querySelector('#rhombus-angle');
     const angleValue = getInputValueById('rhombus-angle');
     if (angleValue < 0 || angleValue > 90 || isNaN(angleValue)) {
         rhombusAngleInputField.classList.remove('bg-gray-100');
