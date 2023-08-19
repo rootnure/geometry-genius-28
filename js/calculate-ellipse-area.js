@@ -5,6 +5,10 @@ function calculateEllipseArea() {
         emptyOrStringMsg();
         return;
     }
+    else if(majorRadius <= 0 || minorRadius <= 0) {
+        negativeNotAllowed();
+        return;
+    }
     const area = Math.PI * majorRadius * minorRadius;
     setElementInnerTextById('ellipse-area', parseFloat(area.toFixed(2)));
     addToCalculationEntry('Ellipse(A-B)', area);

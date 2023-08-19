@@ -32,6 +32,11 @@ function emptyOrStringMsg() {
     alert('Input fields cannot be empty or string');
 }
 
+// negative value input message
+function negativeNotAllowed() {
+    alert('Value cannot be negative or zero');
+}
+
 
 /* Data Validation */
 /**

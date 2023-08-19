@@ -1,3 +1,17 @@
+document.querySelector('#rhombus-angle').addEventListener('keyup', rhombusAngleValidation);
+document.querySelector('#rhombus-angle').addEventListener('change', rhombusAngleValidation);
+function rhombusAngleValidation() {
+    const rhombusAngleInputField = document.querySelector('#rhombus-angle');
+    const angleValue = getInputValueById('rhombus-angle');
+    if (angleValue < 0 || angleValue > 90 || isNaN(angleValue)) {
+        rhombusAngleInputField.classList.remove('bg-gray-100');
+        rhombusAngleInputField.classList.add('bg-red-200');
+    }
+    else {
+        rhombusAngleInputField.classList.remove('bg-red-200');
+        rhombusAngleInputField.classList.add('bg-gray-100');
+    }
+}
 function calculateRhombusArea() {
     const rhombusAreaBy = document.querySelector('#rhombus-area-by').value;
     let area = 0;
@@ -6,6 +20,14 @@ function calculateRhombusArea() {
         const angle = getInputValueById("rhombus-angle");
         if (isNaN(side) || isNaN(angle)) {
             emptyOrStringMsg();
+            return;
+        }
+        else if (side <= 0) {
+            negativeNotAllowed();
+            return;
+        }
+        else if (angle < 0 || angle > 90) {
+            alert('θ value must be between 0 90');
             return;
         }
         const angleToRadian = angle * Math.PI / 180;
@@ -19,6 +41,10 @@ function calculateRhombusArea() {
             emptyOrStringMsg();
             return;
         }
+        else if (d1 <= 0 || d2 <= 0) {
+            negativeNotAllowed();
+            return;
+        }
         area = 0.5 * d1 * d2;
         addToCalculationEntry('Rhombus(d1-d2)', area);
     }
@@ -27,6 +53,10 @@ function calculateRhombusArea() {
         const height = getInputValueById("rhombus-height");
         if (isNaN(base) || isNaN(height)) {
             emptyOrStringMsg();
+            return;
+        }
+        else if (base <= 0 || height <= 0) {
+            negativeNotAllowed();
             return;
         }
         area = base * height;

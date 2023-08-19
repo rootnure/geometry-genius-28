@@ -10,6 +10,10 @@ function calculateRectangleArea() {
         emptyOrStringMsg();
         return;
     }
+    else if(height <= 0 || width <= 0) {
+        negativeNotAllowed();
+        return;
+    }
 
     // calculate rectangle area
     const area = height * width;

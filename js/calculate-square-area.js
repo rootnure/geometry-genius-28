@@ -4,6 +4,10 @@ function calculateSquareArea() {
         emptyOrStringMsg();
         return;
     }
+    else if(squareSide <= 0) {
+        negativeNotAllowed();
+        return;
+    }
     const area = Math.pow(squareSide, 2);
 
     setElementInnerTextById('square-area', parseFloat(area.toFixed(2)));

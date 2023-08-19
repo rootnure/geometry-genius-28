@@ -1,11 +1,17 @@
 function calculateTriangleArea() {
     // get triangle base value
-    const baseField = document.querySelector('#triangle-base');
-    const base = parseFloat(baseField.value);
+    const base = getInputValueById('triangle-base');
 
     // get triangle height value
-    const heightField = document.querySelector('#triangle-height');
-    const height = parseFloat(heightField.value);
+    const height = getInputValueById('triangle-height');
+    if(isNaN(base) || isNaN(height)) {
+        emptyOrStringMsg();
+        return;
+    }
+    else if(base <= 0 || height <= 0) {
+        negativeNotAllowed();
+        return;
+    }
 
     // calculate triangle area
     const area = 0.5 * base * height;

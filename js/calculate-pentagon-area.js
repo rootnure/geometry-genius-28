@@ -5,6 +5,10 @@ function calculatePentagonArea() {
         emptyOrStringMsg();
         return;
     }
+    else if(perimeter <= 0 || apothem <= 0) {
+        negativeNotAllowed();
+        return;
+    }
 
     const area = 0.5 * perimeter * apothem;
 

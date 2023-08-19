@@ -5,6 +5,10 @@ function calculateParallelogramArea() {
         emptyOrStringMsg();
         return;
     }
+    else if(base <= 0 || height <= 0) {
+        negativeNotAllowed();
+        return;
+    }
     const area = base * height;
 
     setElementInnerTextById('parallelogram-area', parseFloat(area.toFixed(2)));
